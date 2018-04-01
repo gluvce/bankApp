@@ -1,0 +1,12 @@
+entity Account {
+	userId String,
+    balance Float
+}
+
+entity History {
+	timestamp DateTime,
+    amount Float
+}
+relationship OneToMany {
+    History{userId} to Account
+}
